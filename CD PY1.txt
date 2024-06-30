@@ -1,0 +1,113 @@
+rua josé otoni 284 09:00 na sexta
+945118023
+
+Algoritmo em python que faz simulações de uma base de dados. onde posso prever situações futuras com um ambiente fornecido pelos dados
+To import a sheet and create a visualization in Power BI, you would typically follow these steps:
+
+Open Power BI Desktop and select ‘Get Data’ from the ‘Home’ tab.
+Choose your data source, such as Excel, and navigate to your file.
+Load your data into Power BI by selecting the sheets you want to import.
+Use the ‘Fields’ pane to drag and drop fields onto the report canvas to create visualizations like charts or graphs.
+
+clinica pompeu
+rua itapura 300
+962210914
+
+Para desenvolver um algoritmo em Python que simule uma base de dados e permita prever situações futuras, podemos utilizar bibliotecas como pandas para manipulação de dados, numpy para operações numéricas e scikit-learn para modelagem preditiva. Abaixo está um exemplo de como você pode fazer isso:
+Instalar as bibliotecas necessárias:
+bash
+Copy
+   pip install pandas numpy scikit-learn
+Criar o algoritmo de simulação e previsão:
+python
+Copy
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+# Simulação de uma base de dados
+np.random.seed(42)
+data_size = 1000
+data = {
+    'feature1': np.random.rand(data_size),
+    'feature2': np.random.rand(data_size),
+    'feature3': np.random.rand(data_size),
+    'target': np.random.rand(data_size) * 100
+}
+
+df = pd.DataFrame(data)
+
+# Dividir os dados em conjuntos de treinamento e teste
+X = df[['feature1', 'feature2', 'feature3']]
+y = df['target']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Treinar um modelo de regressão linear
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Fazer previsões
+y_pred = model.predict(X_test)
+
+# Avaliar o modelo
+mse = mean_squared_error(y_test, y_pred)
+print(f'Erro quadrático médio: {mse}')
+
+# Função para prever situações futuras
+def prever_situacao_futura(novos_dados):
+    novos_dados_df = pd.DataFrame(novos_dados)
+    previsoes = model.predict(novos_dados_df)
+    return previsoes
+
+# Exemplo de uso da função de previsão
+novos_dados = {
+    'feature1': [0.5, 0.2],
+    'feature2': [0.3, 0.8],
+    'feature3': [0.7, 0.1]
+}
+previsoes = prever_situacao_futura(novos_dados)
+print('Previsões para novos dados:', previsoes)
+Explicação do Código:
+Simulação de Dados:
+Geramos uma base de dados fictícia com 1000 registros e quatro colunas: feature1, feature2, feature3 e target.
+Divisão dos Dados:
+Dividimos os dados em conjuntos de treinamento (80%) e teste (20%).
+Treinamento do Modelo:
+Utilizamos um modelo de regressão linear para treinar os dados de treinamento.
+Previsão e Avaliação:
+Fazemos previsões nos dados de teste e calculamos o erro quadrático médio (MSE) para avaliar o desempenho do modelo.
+Função de Previsão:
+Criamos uma função prever_situacao_futura que recebe novos dados e retorna as previsões do modelo.
+Exemplo de Uso:
+Demonstramos como usar a função de previsão com novos dados.
+Esse é um exemplo básico que pode ser expandido e ajustado conforme necessário, dependendo da complexidade dos dados e do tipo de modelo preditivo que você deseja utilizar.
+Data Scientist
+Faculdade FIAP – Início: 0− Fim: −
+
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+</h1> Exemplo de HTML para o Github</h1>
+</body>
+</html>
+git config --global user.name "cristopher400"
+
+git pull --rebase origin main
+git push -u origin main
+Crist_123
+
+
+Storytime and Reading:
+nothing added to commit but untracked files present (use "git add" to track)
+
+
